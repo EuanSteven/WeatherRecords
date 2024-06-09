@@ -49,8 +49,8 @@ def main():
     current_time = datetime.now(timezone.utc)
     formatted_time = current_time.replace(minute=0, second=0, microsecond=0).strftime("%Y-%m-%dT%H:%M:%S") + '%2B00:00'
 
-    api_url = f'https://history.weathersourceapis.com/v2/points/56.3924,-3.2165/hours/{formatted_time}?fields=all&unitScale=METRIC'
-    api_key = 'nN6afm13AOQpf2yFXCioKSjpu'
+    api_url = f'https://history.weathersourceapis.com/v2/points/LAT, LONG/hours/{formatted_time}?fields=all&unitScale=METRIC'
+    api_key = 'API_KEY'
 
     headers = {
         'Accept': 'application/json',
