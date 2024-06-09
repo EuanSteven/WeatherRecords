@@ -47,8 +47,8 @@ def degrees_to_compass(degrees):
 def main():
     print("================================= Open-Meteo ===================================")
     
-    lat = 56.392411004785075
-    long = -3.21656404778603
+    lat = LAT
+    long = LONG
 
     api_url = f'https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={long}&hourly=temperature_2m,relative_humidity_2m,precipitation_probability,wind_speed_10m,wind_direction_10m,uv_index&wind_speed_unit=ms&timezone=Europe%2FLondon&forecast_days=1&forecast_hours=1'
 
