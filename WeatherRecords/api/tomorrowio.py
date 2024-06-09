@@ -47,14 +47,14 @@ def degrees_to_compass(degrees):
 def main():
     print("================================= Tomorrow.io ==================================")
     
-    lat = 56.392411004785075
-    long = -3.21656404778603
+    lat = LAT
+    long = LONG
 
     current_time = datetime.now()
     timestamp = current_time.replace(minute=0, second=0, microsecond=0)
     formatted_timestamp = timestamp.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    apikey = "cXwRP0LQAUTmbJEpi7OFwcg1CjS5qd1m"
+    apikey = API_KEY
 
     url = f"https://api.tomorrow.io/v4/weather/forecast?location={lat},{long}&apikey={apikey}"
     headers = {"accept": "application/json"}
