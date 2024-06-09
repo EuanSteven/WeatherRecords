@@ -43,10 +43,10 @@ def write_to_csv(write_data):
 def main():
     print("================================= Met Office ===================================")
     
-    lat = 56.392411004785075
-    long = -3.21656404778603
+    lat = LAT
+    long = LONG
 
-    conn = datapoint.connection(api_key='29260c9b-91c3-459e-a323-5ba29d11a10e')
+    conn = datapoint.connection(api_key='API_KEY')
     site = conn.get_nearest_forecast_site(lat, long)
     forecast = conn.get_forecast_for_site(site.id, '3hourly')
     current_timestep = forecast.now()
