@@ -42,7 +42,7 @@ def write_to_csv(write_data):
 def main():
     print("================================= AccuWeather ==================================")
     
-    url = f'http://dataservice.accuweather.com/forecasts/v1/hourly/1hour/330324?apikey=API_KEY&language=en-gb&details=true&metric=true'
+    url = f'http://dataservice.accuweather.com/forecasts/v1/hourly/1hour/LOCATION_CODE?apikey=API_KEY&language=en-gb&details=true&metric=true'
 
     try:
         response = requests.get(url)
