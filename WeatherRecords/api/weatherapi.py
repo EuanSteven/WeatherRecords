@@ -46,13 +46,13 @@ def main():
     current_time = datetime.utcnow()
     formatted_time = current_time.strftime("%H")
 
-    lat = 56.392411004785075
-    long = -3.21656404778603
+    lat = LAT
+    long = LONG
 
     trimmed_lat = str(lat)[:8]
     trimmed_long = str(long)[:8]
 
-    api_url = f'http://api.weatherapi.com/v1/forecast.json?key=13116abe72e8452a92b221932240101&q={trimmed_lat},{trimmed_long}&aqi=no&alerts=no&tides=no&hour={formatted_time}&days=1'
+    api_url = f'http://api.weatherapi.com/v1/forecast.json?key=API_KEY&q={trimmed_lat},{trimmed_long}&aqi=no&alerts=no&tides=no&hour={formatted_time}&days=1'
 
     response = requests.get(api_url)
     json_data = json.loads(response.text)
