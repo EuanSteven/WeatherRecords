@@ -47,13 +47,13 @@ def degrees_to_compass(degrees):
 def main():
     print("=============================== Visual Crossing ================================")
 
-    lat = 56.392411004785075
-    long = -3.21656404778603
+    lat = LAT
+    long = LONG
 
     current_time = datetime.utcnow()
     formatted_time = current_time.strftime("%H")
 
-    api_url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{lat}%2C%20{long}/today?unitGroup=uk&elements=datetime%2Ctemp%2Chumidity%2Cprecipprob%2Cwindspeed%2Cwinddir%2Cuvindex&include=hours&key=K8TXDQ93TS6LF355WH6G829LB&contentType=json'
+    api_url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{lat}%2C%20{long}/today?unitGroup=uk&elements=datetime%2Ctemp%2Chumidity%2Cprecipprob%2Cwindspeed%2Cwinddir%2Cuvindex&include=hours&key=API_KEY&contentType=json'
 
     response = requests.get(api_url)
     json_data = response.json()
